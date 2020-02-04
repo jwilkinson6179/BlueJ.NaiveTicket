@@ -113,25 +113,27 @@ does it matter which order the three words appear in?
 	Answer: Yes.  Changing the order will cause a syntax error.
 
 * Edit the `TicketMachine` class to try different orderings. After each change, close the editor.
-	* Does the appearance of the class diagram after each change give you a clue as to whether or not other orderings are
-possible?
+	* Does the appearance of the class diagram after each change give you a clue as to whether or not other orderings are possible?
 	* Check by pressing the compile button to see if there is an error message.
 	* Make sure that you reinstantiate the original version after your experiments!
 
 ### Exercise 2.14
 * Is it always necessary to have a semicolon at the end of a field declaration?
+	Answer: Yes, or the statement didn't properly end.
 * Once again, experiment via the editor.
 * The rule you will learn here is an important one, so be sure to remember it.
 
 
 ### Exercise 2.15
 * Write in full the declaration for a field of type `int` whose name is `status`.
+	private int status;
 
 ### Exercise 2.16
 * To what class does the following constructor belong?
 ```
 public Student(String name)
 ```
+Answer: class Student
 
 ### Exercise 2.17
 * How many parameters does the following constructor have and what are their types?
