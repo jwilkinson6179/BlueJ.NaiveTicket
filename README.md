@@ -126,7 +126,7 @@ does it matter which order the three words appear in?
 
 ### Exercise 2.15
 * Write in full the declaration for a field of type `int` whose name is `status`.
-	private int status;
+		Answer: private int status;
 
 ### Exercise 2.16
 * To what class does the following constructor belong?
@@ -140,9 +140,12 @@ Answer: class Student
 ```
 public Book(String title, double price)
 ```
+	Answer: 2, type `String` and `double`
 
 ### Exercise 2.18
 * Can you guess what types some of the `Book` class’s fields might be?
+	Answer: `author`, `title`, `pageCount`, `releaseDate`, `genre`
 * Can you assume anything about the names of its fields?
+	Answer: Most will be Strings (`author`, `title`, `genre`) but `pageCount` will be Integer, and `releaseDate` could be Date
 
 READ upto and INCLUDING section 2.15 of this chapter.
