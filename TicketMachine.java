@@ -40,7 +40,7 @@ public class TicketMachine
     {
         return price;
     }
-    
+
     /**
      * Return ticketNumber.
      * (Increments on each print.)
@@ -67,17 +67,17 @@ public class TicketMachine
         balance = balance + amount;
         return balance;
     }
-    
+
     public Integer calculateTotal(){
         total = balance + total;
         return total;
     }
-    
+
     public Integer incrementTicketNumber(){
         ticketNumber++;
         return ticketNumber;
     }
-    
+
 
     /**
      * Print a ticket.
@@ -92,7 +92,7 @@ public class TicketMachine
         total = total + balance;
         // Clear the balance.
         balance = 0;
-        
+
         return "Ticket price: " + price + " cents. " + "Your total is " + total + ".";
     }
 }

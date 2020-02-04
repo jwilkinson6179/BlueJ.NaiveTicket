@@ -17,12 +17,18 @@ Work through all these exercises. You edit this file with your answers for these
 
 ### Exercise 2.2
 * What value is returned if you check the machine’s balance after it has printed a ticket?
+Answer: 0
 
 ### Exercise 2.3
 * Experiment with inserting different amounts of money before printing tickets.
 	* Do you notice anything strange about the machine’s behavior?
+			Answer: getTotal() increments current balance without adding cash, the machine doesn't give change.  It outputs to the user the message of how much the machine has gathered (An incorrect amount at that, because it eats your change) instead of the user's remaining balance.
+
 	* What happens if you insert too much money into the machine – do you receive any refund?
+			Answer: It eats your balance when it calls printTicket().
+
 	* What happens if you do not insert enough and then try to print a ticket?
+		You still get your ticket, but the money entered is spent.
 
 ### Exercise 2.4
 * Try to obtain a good understanding of a ticket machine’s behavior by interacting with it on the object bench before we start looking at how the `TicketMachine` class is implemented in the next section.
@@ -31,9 +37,13 @@ Work through all these exercises. You edit this file with your answers for these
 * Create another ticket machine for tickets of a different price.
 	* Buy a ticket from that machine.
 	* Does the printed ticket look different?
+		Answer: The output message's price is different.
 
 ### Exercise 2.6
 * Write out what you think the outer wrappers of the `Student` and `LabClass` classes might look like – do not worry about the inner part.
+	Answer:
+		public class Student
+		public class LabClass
 
 ### Exercise 2.7
 Does it matter whether we write<br>
@@ -41,11 +51,17 @@ Does it matter whether we write<br>
 or<br>
 `class public TicketMachine`<br>
 in the outer wrapper of a class?
+	Answer: Yes, `class public TicketMachine` does not compile.
 
 * Edit the source of the `TicketMachine` class to make the change and then close the editor window.
 	* Do you notice a change in the class diagram?
+			Answer: Yes, it is criss-crossed.
+
 	* What error message do you get when you now press the compile button?
+			Answer: `<identifier> expected`, `illegal start of expression` and `invalid method declaration; return type required`
+
 	* Do you think this message clearly explains what is wrong?
+			Answer: Somewhat, I don't really know what an `<identifier>` is but I can Google it
 
 ### Exercise 2.8
 * Check whether or not it is possible to leave out the word `public` from the outer wrapper of the `TicketMachine` class.
@@ -54,17 +70,25 @@ in the outer wrapper of a class?
 * From your earlier experimentation with the ticket machine objects within BlueJ you can probably remember the names of some of the methods – `printTicket`, for instance.
 	* Look at the class definition in Code 2.1 and use this knowledge, along with the additional information about ordering we have given you, to try to make a list of the names of the fields, constructors, and methods in the `TicketMachine` class.
 	* Hint: There is only one constructor in the class.
+		Answer:
+			`field`: price, balance, total, ticketNumber
+			`constructor`: public TicketMachine(Integer ticketCost)
+			`methods`: getPrice, getTicketNumber, getBalance, insertMoney, calculateTotal, incrementTicketNumber, printTicket
 
 ### Exercise 2.10
 * Do you notice any features of the constructor that make it significantly different from the other methods of the class?
+	Answer: The constructor initializes the fields such as balance or ticketNumber.
 
 ### Exercise 2.11
 * What do you think is the type of each of the following fields?
 
 ```java
 private int count;
+	Answer: int
 private Student representative;
+	Answer: Object
 private Server host;
+	Answer: Object
 ```
 
 ### Exercise 2.12
@@ -72,8 +96,11 @@ private Server host;
 
 ```java
 private boolean alive;
+	Answer: alive
 private Person tutor;
+	Answer: tutor
 private Game game;
+	Answer: game
 ```
 ### Exercise 2.13
 
@@ -83,6 +110,8 @@ In the following field declaration from the TicketMachine class<br>
 private int price;
 ```
 does it matter which order the three words appear in?
+	Answer: Yes.  Changing the order will cause a syntax error.
+
 * Edit the `TicketMachine` class to try different orderings. After each change, close the editor.
 	* Does the appearance of the class diagram after each change give you a clue as to whether or not other orderings are
 possible?
